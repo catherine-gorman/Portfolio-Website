@@ -28,6 +28,11 @@ body {
 
 h1, h2 {
     font-family: "Work Sans", sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 4.5rem; 
 }
 
 h2 {
@@ -35,11 +40,14 @@ h2 {
 }
 
 /*** Header ***/
-.header {
-    height: 600px;
-    background-color: #444444;
+header {
+    height: 100vh;
+    background-image: url("../images/backgroundimage.jpg");
+    background-position: center;
+    background-size: cover;
 }
-
+/*Photo by <a href="https://unsplash.com/@atomsmasher?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sandip Kalal</a> on <a href="https://unsplash.com/t/textures-patterns?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+  
 nav {
     float: right;
     margin: 20px;
@@ -61,6 +69,14 @@ a {
     text-decoration: none;
     color: white;
 }
+
+.info {
+    color: white;
+    opacity: 80%;
+    padding: 30vh 20vw;
+}
+
+
 
 /*** About Me ***/
 .content {
