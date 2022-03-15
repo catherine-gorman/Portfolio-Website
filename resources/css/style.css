@@ -10,6 +10,13 @@ CSS rules to specify families
 font-family: 'Open Sans', sans-serif; - open sans regular for text
 font-family: 'Work Sans', sans-serif; - Work sans light for headings
 
+--light-slate-gray: #6b889e;
+--burnt-umber: #923926;
+--cadmium-orange: #e9873f;
+--rich-black-fogra-29: #0c151b;
+--gray-web: #807c7d;
+
+
 *****/
 
 * {
@@ -45,6 +52,7 @@ header {
     background-image: url("../images/backgroundimage.jpg");
     background-position: center;
     background-size: cover;
+    color: white;
 }
 /*Photo by <a href="https://unsplash.com/@atomsmasher?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sandip Kalal</a> on <a href="https://unsplash.com/t/textures-patterns?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
   
@@ -61,7 +69,6 @@ nav li {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    color: white;
     display: inline;
 }
 
@@ -71,7 +78,6 @@ a {
 }
 
 .info {
-    color: white;
     opacity: 80%;
     padding: 30vh 20vw;
 }
@@ -80,8 +86,7 @@ a {
 
 /*** About Me ***/
 .content {
-    padding: 50px 30px;
-    color: #444444;
+    padding: 60px 30px;
     background-color: white;
     width: 100%;
 }
@@ -90,22 +95,31 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: left;
 }
 
+.about-me-container h2 {
+    color: #923926;
+}
+
 .about-me-container img {
-    width: 400px;
+    width: 350px;
+    margin-left: 2%;
+    border: 5px solid #923926;
     border-radius: 400px;
+    background-color: #923926;
+    padding: 5px;
 }
 
 .about-me-description {
-    width: 60%;
+    width: 50%;
+    margin-right: 8%;
 }
 
 /*** Projects ***/
 #projects {
-    background-color: #444;
+    background-color: #0C161C;
     color: white;
 }
 
@@ -116,11 +130,38 @@ a {
     margin-top: 30px;
 }
 
-.mini-project {
-    background-color: #A1A3A6;
+.mini-project { 
     padding: 20px;
     border-radius: 20px;
-    /** Overlay gradient with pic? **/
+}
+
+.project-text {
+    width: 50%;
+    height: 100%;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.box-a, .box-d {
+    background-color: #E9873F;
+    color: #0D161C;
+}
+
+.box-a a, .box-d a {
+    color: #0D161C;
+    font-weight: bold;
+}
+
+.box-a {
+    background-image: linear-gradient(to right, rgba(233, 135, 63, 1), rgba(233, 135, 63, 1), rgba(255, 255, 255, 0.712)), url('../images/ballybofey-website.JPG');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.box-b, .box-c {
+    background-color: #51697B;
 }
 
 /*** Skills ***/
