@@ -16,6 +16,12 @@ font-family: 'Work Sans', sans-serif; - Work sans light for headings
 --rich-black-fogra-29: #0c151b;
 --gray-web: #807c7d;
 
+--dark-electric-blue: #51697bff;
+--burnt-umber: #923926ff;
+--cadmium-orange: #e9873fff;
+--rich-black-fogra-29: #0d161cff;
+--gray-web: #807c7dff;
+
 
 *****/
 
@@ -126,22 +132,40 @@ a {
 .projects-container {
     display: grid;
     grid-template: 300px 300px / 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 25px;
     margin-top: 30px;
 }
 
 .mini-project { 
     padding: 20px;
     border-radius: 20px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* on hover solid background? */
 }
 
 .project-text {
     width: 50%;
     height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.project-text ul {
+    padding-left: 1rem;
+    margin-bottom: 50px;
+    list-style: circle;
+}
+
+.project-text p {
+    font-family: "Work Sans", sans-serif;
 }
 
 h3 {
     font-size: 1.5rem;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 300;
 }
 
 .box-a, .box-d {
@@ -155,13 +179,19 @@ h3 {
 }
 
 .box-a {
-    background-image: linear-gradient(to right, rgba(233, 135, 63, 1), rgba(233, 135, 63, 1), rgba(255, 255, 255, 0.712)), url('../images/ballybofey-website.JPG');
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, rgba(233, 135, 63, 1), rgba(233, 135, 63, 0.98), rgba(255, 255, 255, 0)), url('../images/ballybofey-website.JPG');
 }
 
-.box-b, .box-c {
-    background-color: #51697B;
+.box-b {
+    background-image: linear-gradient(to right, rgba(51, 87, 112, 1), rgba(51, 87, 112, 0.98), rgba(255, 255, 255, 0)), url('../images/prism.JPG');
+}
+
+.box-c {
+    background-image: linear-gradient(to right, rgba(51, 87, 112, 1), rgba(51, 87, 112, 0.98), rgba(255, 255, 255, 0)), url('../images/temp-python.jpg');
+}
+
+.box-d {
+    background-image: linear-gradient(to right, rgba(233, 135, 63, 1), rgba(233, 135, 63, 0.98), rgba(255, 255, 255, 0)), url('../images/temp-javascript.jpg');
 }
 
 /*** Skills ***/
@@ -171,16 +201,22 @@ h3 {
 
 .skills-container {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
 }
 
-.skill {
-    border-radius: 25px; 
-    background-color: #A1A3A6;
-    padding: 20px;
-    width: 20%;
+.skill-heading {
+    width: 150px;
+    height: 50px;
+    background-color: rgba(233, 135, 63, 1);
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#skills-details {
+    height: 450px;
+    width: 50%;
+    background-color:rgba(233, 135, 63, 1);
 }
 
 /*** Contact Me ***/
