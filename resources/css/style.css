@@ -196,33 +196,62 @@ h3 {
 
 /*** Skills ***/
 #skills {
+    width: 50%;
+    float: left;
+}
+
+#skills h2, #contact h2 {
+    color: #303F4B;
     text-align: center;
 }
 
 .skills-container {
     display: flex;
+    background-color: #9BAFBF;
+    width: 100%;
+    margin: 30px;
+    border-radius: 25px 0 25px 0;
+}
+
+.skill-headings {
+    background-color: #50687C;
+    border-radius: 25px 0 0;
 }
 
 .skill-heading {
     width: 150px;
     height: 50px;
-    background-color: rgba(233, 135, 63, 1);
-    border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 25px 0 25px 0;
+}
+
+.skill-heading:hover {
+    background-color: #9BAFBF;
+    font-weight: bold;
 }
 
 #skills-details {
-    height: 450px;
-    width: 50%;
-    background-color:rgba(233, 135, 63, 1);
+    width: 100%;
+    background-color:#9BAFBF;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: left;
+}
+
+#skills-details li {
+    list-style-position: inside;
+}
+
+#skills-details p {
+    padding: 10px 0;
 }
 
 /*** Contact Me ***/
 #contact {
-    background-color: #444;
-    color: white;
+    width: 50%;
+    float: right;
 }
 
 /*** Footer ***/
@@ -233,4 +262,5 @@ footer {
     padding: 10px;
     font-weight: bold;
     text-align: right;
+    clear: both;
 }
