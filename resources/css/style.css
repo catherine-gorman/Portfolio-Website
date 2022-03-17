@@ -1,12 +1,4 @@
 /***** 
-
-dark grey { color: #444444; }
-grey { color: #808284; }
-light grey { color: #A1A3A6; }
-white { color: #FFFFFF; }
-
-CSS rules to specify families
-
 font-family: 'Open Sans', sans-serif; - open sans regular for text
 font-family: 'Work Sans', sans-serif; - Work sans light for headings
 
@@ -21,8 +13,6 @@ font-family: 'Work Sans', sans-serif; - Work sans light for headings
 --cadmium-orange: #e9873fff;
 --rich-black-fogra-29: #0d161cff;
 --gray-web: #807c7dff;
-
-
 *****/
 
 * {
@@ -67,27 +57,21 @@ header {
     color: white;
 }
 
-nav {
-    float: right;
-    margin: 20px;
-}
-
-nav ul {
-    display: flex;
-}
-
-nav li {
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    display: inline;
-}
-
 a {
     text-decoration: none;
     color: white;
 }
 
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav li {
+    padding: 10px;
+    display: inline;
+}
 
 .info {
     opacity: 80%;
@@ -95,29 +79,57 @@ a {
     clear: both;
 }
 
+/* Mobile */
+@media only screen and (max-width: 480px) {
+    nav ul {
+        justify-content: space-around;
+        padding: 10px 10px 0;
+    }
 
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    header h2 {
+        font-size: 2rem;
+    }
+
+    .info {
+        text-align: center;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 1056px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    header h2 {
+        font-size: 2rem;
+    }
+
+    .info {
+        text-align: center;
+        padding: 20vh 10vw;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 480px) {
+    nav {
+        float: right;
+        margin: 20px;
+    }
+}
 
 /*** About Me ***/
-.content {
-    padding: 60px 30px;
-    background-color: white;
-    width: 100%;
-}
-
-.about-me-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 1.2rem;
-    text-align: left;
-}
-
 .about-me-container h2 {
     color: #923926;
 }
 
 .about-me-container img {
-    width: 350px;
+    width: clamp(200px, 30%, 350px);
     margin-left: 2%;
     border: 5px solid #923926;
     border-radius: 400px;
@@ -125,9 +137,48 @@ a {
     padding: 5px;
 }
 
+.content {
+    padding: 60px 30px;
+    background-color: white;
+    width: 100%;
+}
+
 .about-me-description {
     width: 50%;
-    margin-right: 8%;
+}
+
+.about-me-container {
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+/** Mobile & Tablet **/
+@media only screen and (max-width: 768px) {
+    .about-me-container img {
+        display: none;
+    }
+
+    .about-me-description {
+        width: 100%;
+        margin-right: 8%;
+    }
+
+    .content {
+        padding: 30px;
+    }
+}
+
+/** Deskstop **/
+@media only screen and (min-width: 768px) {
+    .about-me-description {
+        margin-right: 8%;
+    }
+
+    .about-me-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
 }
 
 /*** Projects ***/
@@ -138,7 +189,7 @@ a {
 
 .projects-container {
     display: grid;
-    grid-template: 300px 300px / 1fr 1fr;
+    grid-template: 1fr 1fr / 1fr 1fr;
     grid-gap: 25px;
     margin-top: 30px;
 }
@@ -146,9 +197,9 @@ a {
 .mini-project { 
     padding: 20px;
     border-radius: 20px;
-    background-size: 100%;
+    background-size: auto 100%;
     background-repeat: no-repeat;
-    /* on hover solid background? */
+    background-position: right top;
 }
 
 .project-text {
@@ -198,33 +249,95 @@ a:hover {
     background-image: linear-gradient(to right, rgba(233, 135, 63, 1), rgba(233, 135, 63, 0.98), rgba(255, 255, 255, 0)), url('../images/temp-javascript.jpg');
 }
 
-/*** Skills ***/
-#skills {
-    width: 50%;
-    float: left;
+/** Mobile **/
+@media only screen and (max-width: 480px) {
+    .projects-container {
+        display: block;
+    }
+
+    .project-description {
+        display: none;
+    }
+
+    .mini-project {
+        background-image: none;
+        color: white;
+    }
+    
+    .project-text {
+        width: 100%;
+    }
+
+    .project-text h3 {
+        margin-bottom: 10px;
+    }
+
+    .project-text p, .project-text a {
+        color: white;
+    }
+
+    .box-a, .box-c {
+        background-color: rgba(233, 135, 63, 1);
+    }
+
+    .box-b, .box-d {
+        background-color: rgba(51, 87, 112, 1);
+    }
+
+    .projects-container {
+        display: block;
+    }
+
+    .mini-project {
+        margin: 10px 0;
+    }
 }
 
+/** Tablet **/
+@media only screen and (min-width: 480px) and (max-width: 1056px) {
+    .projects-container {
+        display: block;
+    }
+
+    .mini-project {
+        margin: 10px 0;
+    }
+    
+    .box-c {
+        background-image: linear-gradient(to right, rgba(233, 135, 63, 1), rgba(233, 135, 63, 0.98), rgba(255, 255, 255, 0)), url('../images/temp-python.jpg');
+        background-color: rgba(233, 135, 63, 1);
+        color: black;
+    }
+
+    .box-c a {
+        color: black;
+    }
+
+    .box-d {
+        background-image: linear-gradient(to right, rgba(51, 87, 112, 1), rgba(51, 87, 112, 0.98), rgba(255, 255, 255, 0)), url('../images/temp-javascript.jpg');
+        background-color: rgba(51, 87, 112, 1);
+        color: white;
+    }
+
+    .box-d a {
+        color: white;
+    }
+
+    .project-description {
+        margin-top: 10px;
+    }
+}
+
+/*** Skills ***/
 #skills h2, #contact h2, h3 strong {
     color: #303F4B;
-    text-align: center;
-}
-
-.skills-container {
-    display: flex;
-    background-color: #9BAFBF;
-    width: 100%;
-    margin: 30px; 
-    border-radius: 25px 0 25px 0;
 }
 
 .skill-headings {
     background-color: #50687C;
-    border-radius: 25px 0 0;
 }
 
 .skill-heading {
-    width: 150px;
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,12 +365,69 @@ a:hover {
     padding: 10px 0;
 }
 
-/*** Contact Me ***/
-#contact {
-    width: 50%;
-    float: right;
+
+/** Mobile **/
+@media only screen and (max-width: 480px) {
+    .skills-container {
+        display: block;
+        background-color: #50687C;
+        margin: 20px 0 0;
+    }
+
+    .skill-headings {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .skill-heading {
+        padding: 10px 15px;
+    }
+
+    #skills-details {
+        border-radius: 0;
+    }
 }
 
+/** Tablet & Desktop **/
+@media only screen and (min-width: 480px) {
+    .skills-container {
+        display: flex;
+        background-color: #9BAFBF;
+        width: 90%;
+        margin: 30px; 
+        border-radius: 25px 0 25px 0;
+    }
+    
+    .skill-headings {
+        border-radius: 25px 0 0;
+    }
+    
+    .skill-heading {
+        width: 150px;
+        height: 50px;
+        border-radius: 25px 0 25px 0;
+    }
+    
+}
+
+/** Desktop **/
+@media only screen and (min-width: 1056px) {
+    #contact {
+        float: right;
+        width: 50%;
+    }
+
+    #skills {
+        width: 50%;
+        float: left;
+    }
+
+    #skills h2, #contact h2, h3 strong {
+        text-align: center;
+    }
+}
+/*** Contact Me ***/
 #contact li {
     list-style-position: inside;
     list-style: none;
@@ -271,6 +441,63 @@ a:hover {
     padding-top: 30px;
     padding-left: 10%;
 }
+
+#contact img {
+    display: none;
+}
+
+/** Mobile to Laptop **/
+@media only screen and (max-width: 1056px) {
+    #contact {
+        background-color: #923926;
+        color: white;
+    }
+
+    #contact h3, #contact h2, #contact ul {
+        color: white;
+        opacity: 0.9;
+    }
+
+    #contact h3 {
+        padding-left: 0;
+    }
+
+    #contact li {
+        padding-left: 10%;
+    }
+
+    #contact strong {
+        color: white;
+    }
+}
+
+/** Tablets & Laptops **/
+@media only screen and (min-width: 660px) and (max-width: 1056px) {
+    #contact {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+/** Laptops **/
+@media only screen and (min-width: 768px) and (max-width: 1056px) {
+    #contact img {
+        display: block;
+        width: 40%;
+        border-radius: 300px;
+        margin-top: 20px;
+    }
+
+    .contact-heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+    }
+}
+
 
 /*** Footer ***/
 footer {
@@ -290,4 +517,12 @@ footer a {
 
 footer a:hover {
     text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+    
+
+    .mobile-hide {
+        display: none;
+    }
 }
