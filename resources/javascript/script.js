@@ -27,6 +27,7 @@ let getHtmlInfo = () => {
         <li>CSS Flexbox & Grid</li>
     </ul>
     <p>Many of these skills can be seen in this website as well as in the example projects above.</p>
+    <p>I also have knowledge of accessibility practices and design best practices.
     <p>Relevant Codecademy courses I have completed include:</p>
     <ul>
         <li>Learn HTML</li>
@@ -42,44 +43,66 @@ let getHtmlInfo = () => {
 let getJavascriptInfo = () => {
     details.innerHTML = `<h3>JavaScript</h3>
     <p>I have an understanding of JavaScript and many of its concepts, for example:</p>
-    <ul>
-        <li>thing 1</li>
-        <li>thing 2</li>
-        <li>thing 3</li>
-    </ul>
-    <p>Many of these skills can be seen in this website as well as in the example projects above.</p>
+    <div style="float: left; width: 45%;">
+        <ul >
+            <li>Variables</li>
+            <li>Functions</li>
+            <li>Arrays</li>
+            <li>JavaScript & the DOM</li>
+        </ul>
+    </div>
+    <div style="float: right; width: 45%;">
+        <ul >
+            <li>Loops</li>
+            <li>Objects</li>
+            <li>Scope</li>
+            <li>The <code>script</code> element</li>
+        </ul>
+    </div> 
+    <p style="clear: both;">I have learned to combine many of these concepts with my knowledge of HTML to create interactive websites like this one.</p>
     <p>Relevant Codecademy courses I have completed include:</p>
     <ul>
         <li>Learn JavaScript</li>
     </ul>
-    <p>I am currently completeing the Front End Engineering Career Path as well</p>`;
+    <p>I am currently completeing the Front End Engineering Career Path as well as the Learn Node.js course.</p>`;
     javascript.style.backgroundColor = "#9BAFBF";
 }
 let getPythonInfo = () => {
     details.innerHTML = `<h3>Python</h3>
     <p>I have an understanding of Python and many of its concepts, for example:</p>
-    <ul>
-        <li>thing 1</li>
-        <li>thing 2</li>
-        <li>thing 3</li>
-    </ul>
-    <p>Many of these skills can be seen in the example {ython project above.</p>
+    <div style="float: left; width: 45%;">
+        <ul >
+            <li>Function</li>
+            <li>Lists</li>
+            <li>Loops</li>
+            <li>Dictionaries</li>
+        </ul>
+    </div>
+    <div style="float: right; width: 45%;">
+        <ul >
+            <li>Methods</li>
+            <li>Modules</li>
+            <li>Classes</li>
+        </ul>
+    </div>  
+    <p style="clear: both">Many of these skills can be seen in the example Python project above.</p>
     <p>Relevant Codecademy courses I have completed include:</p>
     <ul>
         <li>Learn Python 3</li>
     </ul>
-    <p>I am currently completeing the Computer Science Career Path as well</p>`;
+    <p>I am currently completeing the Computer Science Career Path as well.</p>`;
     python.style.backgroundColor = "#9BAFBF";
 }
 let getGitInfo = () => {
     details.innerHTML = `<h3>Git & GitHub</h3>
     <p>I have an understanding of Git and many of its concepts, for example:</p>
     <ul>
-        <li>thing 1</li>
-        <li>thing 2</li>
-        <li>thing 3</li>
+        <li>Command Line</li>
+        <li>Basic Git Work FLow</li>
+        <li>Backtracking</li>
+        <li>Managing branches and GitHub flow.</li>
     </ul>
-    <p>I used manhy of these skills while making this website as well as in the example projects above.</p>
+    <p>I used many of these skills while making this website as well as in the example projects above.</p>
     <p>Relevant Codecademy courses I have completed include:</p>
     <ul>
         <li>Build A Website With HTML, GitHub & GitHub Pages</li>
@@ -94,7 +117,15 @@ let getOtherInfo = () => {
         <li>Introduction to Cybersecurity</li>
         <li>Learn Color Design</li>
     </ul>
-    <p>I have also completed courses on other platforms, for example JavaScript, HTML&CSS and SQL courses on Khan Academy, which taught me many skills, including Object-Orientated Design.</p>`
+    <p>I have also completed courses on other platforms, for example JavaScript, HTML&CSS and SQL courses on Khan Academy, which taught me many skills, including Object-Orientated Design.</p>
+    <p>Other concepts and skills I am familiar with not mentioned above include: </p>
+    <ul>
+        <li>Wireframing</li>
+        <li>Markdown</li>
+        <li>Chrome DevTools</li>
+        <li>Jupiter Notebooks</li>
+        <li>Icons + Font Awesome</li>
+    </ul>`
     other.style.backgroundColor = "#9BAFBF";
 }
 

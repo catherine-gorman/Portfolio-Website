@@ -52,6 +52,12 @@ h2 {
     font-size: 3rem;
 }
 
+h3 {
+    font-size: 1.5rem;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 300;
+}
+
 /*** Header ***/
 header {
     height: 100vh;
@@ -162,12 +168,6 @@ a {
     font-family: "Work Sans", sans-serif;
 }
 
-h3 {
-    font-size: 1.5rem;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 300;
-}
-
 .box-a, .box-d {
     background-color: #E9873F;
     color: #0D161C;
@@ -200,7 +200,7 @@ h3 {
     float: left;
 }
 
-#skills h2, #contact h2 {
+#skills h2, #contact h2, h3 strong {
     color: #303F4B;
     text-align: center;
 }
@@ -209,7 +209,7 @@ h3 {
     display: flex;
     background-color: #9BAFBF;
     width: 100%;
-    margin: 30px;
+    margin: 30px; 
     border-radius: 25px 0 25px 0;
 }
 
@@ -254,9 +254,23 @@ h3 {
     float: right;
 }
 
+#contact li {
+    list-style-position: inside;
+    list-style: none;
+    font-size: 1.5rem;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 300;
+    padding-left: 20%;
+}
+
+#contact h3 {
+    padding-top: 30px;
+    padding-left: 10%;
+}
+
 /*** Footer ***/
 footer {
-    background-color: black;
+    background-color: #0d161c;
     color: white;
     font-size: 10px;
     padding: 10px;
