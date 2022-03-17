@@ -66,8 +66,7 @@ header {
     background-size: cover;
     color: white;
 }
-/*Photo by <a href="https://unsplash.com/@atomsmasher?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sandip Kalal</a> on <a href="https://unsplash.com/t/textures-patterns?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
-  
+
 nav {
     float: right;
     margin: 20px;
@@ -89,9 +88,11 @@ a {
     color: white;
 }
 
+
 .info {
     opacity: 80%;
-    padding: 30vh 20vw;
+    padding: 20vh 20vw;
+    clear: both;
 }
 
 
@@ -175,6 +176,9 @@ a {
 
 .box-a a, .box-d a {
     color: #0D161C;
+}
+
+a:hover {
     font-weight: bold;
 }
 
@@ -274,7 +278,16 @@ footer {
     color: white;
     font-size: 10px;
     padding: 10px;
-    font-weight: bold;
-    text-align: right;
     clear: both;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: none;
 }

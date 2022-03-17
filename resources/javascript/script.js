@@ -149,3 +149,4 @@ other.addEventListener("click", () => {
     normalColor();
     getOtherInfo();
 });
+
