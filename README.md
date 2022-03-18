@@ -5,4 +5,6 @@ This website gives a little bit of information about me. I am creating it as par
 + JavaScript
 + Git & GitHub
 ____________________
+Link to site: https://catherine-gorman.github.io/Portfolio-Website/
+____________________
 I hope you enjoy it!
